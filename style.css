@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  -webkit-box-shadow: -1px 10px 4px -10px rgba(0, 0, 0, 0.82);
+  -moz-box-shadow: -1px 10px 4px -10px rgba(0, 0, 0, 0.82);
+  box-shadow: -1px 10px 4px -10px rgba(0, 0, 0, 0.82);
+  padding: 2rem;
+  background-color: #eff6ff;
+  color: #2563eb;
+  letter-spacing: 10px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+button {
+  padding: 1rem 2rem;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  color: #eff6ff;
+  cursor: pointer;
+}
+
+.add-button {
+  margin: auto;
+}
+
+main {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-auto-rows: 1fr;
+}
+
+.card__grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  );
+  grid-auto-rows: 1fr;
+}
