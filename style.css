@@ -14,7 +14,7 @@ header {
   box-shadow: -1px 10px 4px -10px rgba(0, 0, 0, 0.82);
   padding: 2rem;
   background-color: #eff6ff;
-  color: #2563eb;
+  color: #18181b;
   letter-spacing: 10px;
   margin-bottom: 1rem;
 }
@@ -23,7 +23,7 @@ h1 {
   font-size: 2rem;
 }
 
-button {
+.add-button {
   padding: 1rem 2rem;
   background-color: #2563eb;
   border: none;
@@ -38,16 +38,53 @@ button {
 }
 
 main {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  grid-auto-rows: 1fr;
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+  padding: 1rem;
 }
 
 .card__grid {
   display: grid;
   grid-template-columns: repeat(
-    auto-fit,
-    minmax(200px, 1fr)
+    auto-fill,
+    minmax(300px, 1fr)
   );
   grid-auto-rows: 1fr;
+  padding: 1rem;
+  margin-top: 1rem;
+  gap: 2rem;
+}
+
+.card {
+  border-radius: 10px;
+  background-color: #eff6ff;
+  padding: 1.5rem;
+  box-shadow: 0 8px 7px -7px rgba(0, 0, 0, 0.82);
+  -webkit-box-shadow: 0 8px 7px -7px rgba(0, 0, 0, 0.82);
+  -moz-box-shadow: 0 8px 7px -7px rgba(0, 0, 0, 0.82);
+  color: #18181b;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.card__btns {
+  width: 90%;
+  padding: 0.6rem;
+  font-size: 1.5rem;
+  color: #18181b;
+  border: none;
+  border-radius: 10px;
+}
+
+.is-read {
+  background-color: #86efac;
+}
+
+.not-read {
+  background-color: #f87171;
 }

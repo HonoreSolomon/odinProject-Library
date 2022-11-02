@@ -18,7 +18,7 @@ let myLibrary = [
     title: 'mere christianity',
     author: 'cs lewis',
     pages: 181,
-    isRead: true,
+    isRead: false,
     info() {
       return `${this.title} by ${this.author}, ${
         this.pages
@@ -45,14 +45,23 @@ function addBookToLibrary() {
 }
 
 function displayBook(book) {
-  let card = document.createElement('div');
-  let title = document.createElement('p');
-  let author = document.createElement('p');
-  let pages = document.createElement('p');
+  const card = document.createElement('div');
+  const title = document.createElement('p');
+  const author = document.createElement('p');
+  const pages = document.createElement('p');
+  const readBtn = document.createElement('button');
+  readBtn.textContent = `${
+    book.isRead ? 'Read' : 'Not Read'
+  } `;
+  readBtn.classList.add('card__btns');
+  readBtn.classList.add(
+    `${book.isRead ? 'is-read' : 'not-read'}`
+  );
   title.textContent = `'${book.title}'`;
   author.textContent = `${book.author}`;
   pages.textContent = `${book.pages} pages`;
-  card.append(title, author, pages);
+  card.append(title, author, pages, readBtn);
+  card.classList.add('card');
   cardGrid.append(card);
 }
 
