@@ -88,3 +88,57 @@ main {
 .not-read {
   background-color: #f87171;
 }
+
+.add__modal {
+  padding: 1rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  max-width: 50%;
+  width: 300px;
+}
+
+.add__modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.form__input {
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #6b7280;
+}
+
+.form__input:focus {
+  outline: 2px solid #18181b;
+  border: none;
+}
+
+.form__submit {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1.5rem;
+  color: #18181b;
+  background-color: #86efac;
+  border: none;
+  border-radius: 10px;
+}
+
+.blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(20px);
+  z-index: 9;
+}

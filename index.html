@@ -25,12 +25,62 @@
     <title>Books</title>
   </head>
   <body>
-    <header>
-      <h1>MYLIB</h1>
-    </header>
-    <main>
-      <button class="add-button">+ Add Book</button>
-      <section class="card__grid"></section>
-    </main>
+    <div class="blur">
+      <header>
+        <h1>MYLIB</h1>
+      </header>
+      <main>
+        <button class="add-button">+ Add Book</button>
+        <section class="card__grid"></section>
+      </main>
+    </div>
+    <div class="add__modal" id="addBook__modal">
+      <form class="add__modal__form" id="addBook__form">
+        <h3>Add New Book</h3>
+        <input
+          class="form__input"
+          type="text"
+          id="title"
+          placeholder="Title"
+          required
+          maxlength="100"
+        />
+        <input
+          class="form__input"
+          type="text"
+          id="author"
+          placeholder="Author"
+          required
+          maxlength="100"
+        />
+        <input
+          class="form__input"
+          type="number"
+          id="pages"
+          placeholder="Pages"
+          required
+          max="10000"
+        />
+        <div class="form__checkbox">
+          <label for="form__is-read">
+            Have you read it?</label
+          >
+          <input
+            type="checkbox"
+            name="read"
+            id="form__is-read"
+          />
+        </div>
+        <!-- /.form__checkbox -->
+        <input
+          type="button"
+          value="Submit"
+          class="form__submit"
+        />
+      </form>
+      <!-- /.form__content -->
+    </div>
+
+    <!-- /.form__modal -->
   </body>
 </html>

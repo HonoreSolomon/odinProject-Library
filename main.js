@@ -41,7 +41,8 @@ function Book(title, author, pages, isRead) {
 }
 
 function addBookToLibrary() {
-  myLibrary.push();
+  const newBook = new Book(title, author, pages, isRead);
+  myLibrary.push(newBook);
 }
 
 function displayBook(book) {
