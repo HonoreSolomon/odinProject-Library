@@ -69,7 +69,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 .card__btns {
@@ -79,6 +79,11 @@ main {
   color: #18181b;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+.card__btns--read {
+  background-color: #f87171;
 }
 
 .is-read {
@@ -86,7 +91,14 @@ main {
 }
 
 .not-read {
-  background-color: #f87171;
+}
+
+.card__btns--delete {
+  background-color: #94a3b8;
+}
+
+.card__btns:hover {
+  text-decoration: underline;
 }
 
 .add__modal {
@@ -105,11 +117,16 @@ main {
   width: 300px;
 }
 
+.add__modal--disabled {
+  display: none;
+}
+
 .add__modal__form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   padding: 1rem;
+  text-align: center;
 }
 
 .form__input {
@@ -118,7 +135,8 @@ main {
   border: 1px solid #6b7280;
 }
 
-.form__input:focus {
+.form__input:focus,
+.form__input:hover {
   outline: 2px solid #18181b;
   border: none;
 }
@@ -131,6 +149,11 @@ main {
   background-color: #86efac;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+.form__submit:hover {
+  text-decoration: underline;
 }
 
 .blur {
@@ -141,4 +164,10 @@ main {
   height: 100%;
   filter: blur(20px);
   z-index: 9;
+}
+
+.form__checkbox {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.2rem;
 }

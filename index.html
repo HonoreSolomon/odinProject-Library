@@ -25,16 +25,19 @@
     <title>Books</title>
   </head>
   <body>
-    <div class="blur">
+    <div id="blur">
       <header>
         <h1>MYLIB</h1>
       </header>
       <main>
         <button class="add-button">+ Add Book</button>
-        <section class="card__grid"></section>
+        <div class="card__grid"></div>
       </main>
     </div>
-    <div class="add__modal" id="addBook__modal">
+    <div
+      class="add__modal add__modal--disabled"
+      id="addBook__modal"
+    >
       <form class="add__modal__form" id="addBook__form">
         <h3>Add New Book</h3>
         <input
@@ -73,7 +76,7 @@
         </div>
         <!-- /.form__checkbox -->
         <input
-          type="button"
+          type="submit"
           value="Submit"
           class="form__submit"
         />
